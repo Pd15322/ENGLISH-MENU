@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Sapori di Mare</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #0c4a6e 0%, #075985 50%, #0369a1 100%);
+            color: white;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .logo {
+            font-size: 3em;
+            font-weight: bold;
+            color: #fbbf24;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .wave {
+            font-size: 2em;
+            margin: 0 10px;
+            animation: wave 2s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #fbbf24;
+            backdrop-filter: blur(5px);
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #fbbf24;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #fbbf24;
+            padding-bottom: 10px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 15px 0;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-info {
+            flex: 1;
+            margin-right: 15px;
+        }
+
+        .item-name {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #fef3c7;
+            margin-bottom: 5px;
+        }
+
+        .item-description {
+            font-size: 0.9em;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        .item-price {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #fbbf24;
+            min-width: 60px;
+            text-align: right;
+        }
+
+        .allergens {
+            font-size: 0.8em;
+            color: #fecaca;
+            margin-top: 3px;
+        }
+
+        .signature {
+            background: linear-gradient(45deg, #fbbf24, #f59e0b);
+            color: #1e293b;
+            border-radius: 10px;
+            padding: 3px 8px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .note {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid #fbbf24;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #fef3c7;
+        }
+
+        .wine-category {
+            background: rgba(139, 69, 19, 0.3);
+            border-left-color: #dc2626;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 10px; }
+            .logo { 
+                font-size: 1.5em; 
+                letter-spacing: 1px;
+                line-height: 1.2;
+            }
+            .wave { 
+                font-size: 1.3em; 
+                margin: 0 5px;
+            }
+            .section { padding: 15px; }
+            .menu-item { flex-direction: column; align-items: flex-start; }
+            .item-price { text-align: left; margin-top: 5px; }
+        }
+
+        @media (max-width: 400px) {
+            .logo { 
+                font-size: 1.3em; 
+                letter-spacing: 0.5px;
+            }
+            .wave { 
+                font-size: 1.1em; 
+                margin: 0 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                🌊 SAPORI DI MARE <span class="wave">🐟</span>
+            </div>
+            <div class="tagline">Authentic Seafood Experience</div>
+        </div>
+
+        <!-- COLD STARTERS -->
+        <div class="section">
+            <div class="section-title">🦐 Cold Starters</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Cold Starters Single Dish</div>
+                    <div class="item-description">5 courses: Langoustine with caramelized lemon, Catalan-style Langoustine, Exotic Tartare with Basmati, Boiled King Prawns, Shrimp Cocktail in pink sauce on Canapé</div>
+                    <div class="allergens">Allergens: 1.2.3.4.7.9</div>
+                </div>
+                <div class="item-price">€12</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Seafood Salad</div>
+                    <div class="item-description">Squid, Shrimp, arugula, celery and parsley</div>
+                    <div class="allergens">Allergens: 2.9.14</div>
+                </div>
+                <div class="item-price">€10</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Raw Seafood Single Dish</div>
+                    <div class="item-description">6 courses</div>
+                    <div class="allergens">Allergens: 2.4.14</div>
+                </div>
+                <div class="item-price">€24</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Grand Plateau of Raw Seafood</div>
+                    <div class="allergens">Allergens: 2.4.14</div>
+                </div>
+                <div class="item-price">€73</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Oysters (subject to availability)</div>
+                    <div class="item-description">Per piece</div>
+                    <div class="allergens">Allergens: 14</div>
+                </div>
+                <div class="item-price">€3.50</div>
+            </div>
+        </div>
+
+        <!-- HOT STARTERS -->
+        <div class="section">
+            <div class="section-title">🔥 Hot Starters</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Hot Starters</div>
+                    <div class="item-description">4 courses: Rosemary Langoustines, Grilled Baby Squid, Pan-fried Monkfish, Clam Sauté *Fish may vary</div>
+                    <div class="allergens">Allergens: 2.4.14</div>
+                </div>
+                <div class="item-price">€18</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Top Hot Starters</div>
+                    <div class="item-description">Rosemary Langoustines, Grilled Baby Squid, Pan-fried Monkfish, Clam Sauté, Boiled Sole with lemon, Homemade stuffed Panzerotto, Spicy Langoustines *Fish may vary</div>
+                    <div class="allergens">Allergens: 1.2.4.8.9.14</div>
+                </div>
+                <div class="item-price">€28</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Peppered Mussels</div>
+                    <div class="allergens">Allergens: 14</div>
+                </div>
+                <div class="item-price">€13</div>
+            </div>
+        </div>
+
+        <!-- FIRST COURSES -->
+        <div class="section">
+            <div class="section-title">🍝 First Courses</div>
+            <div class="note">No modifications to First Courses</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Chitarra with Clams</div>
+                    <div class="allergens">Allergens: 1.2.3.4.9.14</div>
+                </div>
+                <div class="item-price">€10</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Seafood Gnocchi</div>
+                    <div class="item-description">Baby Squid, Parsley, Homemade Langoustine Cream, Shrimp, Mussels, Clams and Tomato</div>
+                    <div class="allergens">Allergens: 1.2.4.9.14</div>
+                </div>
+                <div class="item-price">€15</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Our Signature First Course <span class="signature">SIGNATURE</span></div>
+                    <div class="item-description">Chitarrina with shelled Langoustines and Sole, sautéed with rosemary, lemon and Langoustine cream</div>
+                    <div class="allergens">Allergens: 1.2.3.4</div>
+                </div>
+                <div class="item-price">€16</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Gluten-free Spaghetti with Clams</div>
+                    <div class="item-description">Gluten-free pasta and flour for frying available with advance notice when booking your table to keep the station uncontaminated</div>
+                    <div class="allergens">Allergens: 14</div>
+                </div>
+                <div class="item-price">€14</div>
+            </div>
+        </div>
+
+        <!-- MAIN COURSES -->
+        <div class="section">
+            <div class="section-title">🐟 Main Courses</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Boneless Fried Seafood</div>
+                    <div class="item-description">Squid and Shrimp</div>
+                    <div class="allergens">Allergens: 1.2.14</div>
+                </div>
+                <div class="item-price">€14</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Mixed Fried Seafood</div>
+                    <div class="item-description">Squid, Shrimp and Small fish with bones (With gluten-free flour +€3)</div>
+                    <div class="allergens">Allergens: 1.2.4.14</div>
+                </div>
+                <div class="item-price">€15</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Mixed Grilled Fish</div>
+                    <div class="item-description">Monkfish, Sole, Langoustines, Shrimp and Squid Skewers</div>
+                    <div class="allergens">Allergens: 1.2.4.14</div>
+                </div>
+                <div class="item-price">€25</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Oven-baked Fish with Potatoes</div>
+                    <div class="item-description">Filleted by us before serving. Subject to availability</div>
+                </div>
+                <div class="item-price"></div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Sea Bass</div>
+                    <div class="item-description">Oven-baked with potatoes</div>
+                </div>
+                <div class="item-price">€22</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Sea Bream</div>
+                    <div class="item-description">Oven-baked with potatoes</div>
+                </div>
+                <div class="item-price">€23</div>
+            </div>
+        </div>
+
+        <!-- SIDE DISHES -->
+        <div class="section">
+            <div class="section-title">🥗 Side Dishes</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">French Fries "Chips"</div>
+                </div>
+                <div class="item-price">€4</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Mixed Salad</div>
+                </div>
+                <div class="item-price">€4</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Grilled Vegetables</div>
+                    <div class="item-description">Zucchini and Eggplant</div>
+                </div>
+                <div class="item-price">€5</div>
+            </div>
+        </div>
+
+        <!-- ALTERNATIVE MENU -->
+        <div class="section">
+            <div class="section-title">👨‍👩‍👧‍👦 Alternative Menu</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Pasta with Tomato</div>
+                    <div class="allergens">Allergens: 1.3</div>
+                </div>
+                <div class="item-price">€6</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Chicken Cutlet and Chips</div>
+                    <div class="allergens">Allergens: 1.2</div>
+                </div>
+                <div class="item-price">€10</div>
+            </div>
+        </div>
+
+        <!-- BEVERAGES -->
+        <div class="section">
+            <div class="section-title">🥤 Beverages</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Water 0.75L</div>
+                </div>
+                <div class="item-price">€2</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Coca Cola Glass Bottle 1L</div>
+                </div>
+                <div class="item-price">€6</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Canned Beverages 0.33L</div>
+                </div>
+                <div class="item-price">€3</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Peroni Beer 0.33cl</div>
+                </div>
+                <div class="item-price">€3</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Bianca Piperita 0.33cl</div>
+                    <div class="item-description">White Craft Beer "KM0" produced by "OPPERBACCO" Notaresco(TE)</div>
+                </div>
+                <div class="item-price">€6</div>
+            </div>
+        </div>
+
+        <!-- WHITE AND ROSÉ WINES -->
+        <div class="section wine-category">
+            <div class="section-title">🍷 White and Rosé Wines</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">House Wine Montelvini</div>
+                    <div class="item-description">White or Rosé</div>
+                </div>
+                <div class="item-price">
+                    0.75L: €11<br>
+                    0.50L: €8<br>
+                    0.25L: €5
+                </div>
+            </div>
+            
+            <div style="margin: 20px 0; font-weight: bold; color: #10b981; text-align: center;">ORGANIC WINES</div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Cantina Agriverde - Pecorino Natum</div>
+                    <div class="item-description">Light and Straw-colored</div>
+                </div>
+                <div class="item-price">€19</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Azienda Torre dei Beati - Pecorino Superiore</div>
+                    <div class="item-description">Bold and Lightly Scented</div>
+                </div>
+                <div class="item-price">€26</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Kellerei St.Pauls - Gewürztraminer</div>
+                    <div class="item-description">Bold and Fruity</div>
+                </div>
+                <div class="item-price">€29</div>
+            </div>
+        </div>
+
+        <!-- WINE SELECTION -->
+        <div class="section wine-category">
+            <div class="section-title">🍾 Wine Selection</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Ciù Ciù - Sparkling Passerina</div>
+                </div>
+                <div class="item-price">€22</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Cantina Pasetti - Rosato Testarossa</div>
+                    <div class="item-description">Most loved by Teramo locals</div>
+                </div>
+                <div class="item-price">€23</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Cantina Pasetti - Passerina Testarossa</div>
+                    <div class="item-description">Straw-colored with a very light sparkling note in the finish</div>
+                </div>
+                <div class="item-price">€23</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Camillo Montori - Trebbiano d'Abruzzo Fonte Cupa</div>
+                    <div class="item-description">Bold and Full-bodied tone, a True Trebbiano, Former Vinitaly 2018 winner</div>
+                </div>
+                <div class="item-price">€23</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Camillo Montori - Cerasuolo d'Abruzzo Fonte Cupa</div>
+                    <div class="item-description">Dry, Bold and Easy-drinking</div>
+                </div>
+                <div class="item-price">€24</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Tenuta Ulisse - Cococciola "Glass Cork"</div>
+                    <div class="item-description">Dry and Fresh, a Guarantee</div>
+                </div>
+                <div class="item-price">€24</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Masciarelli Tenute Agricole - Villa Gemma Bianco</div>
+                    <div class="item-description">Wine from Other Times "Old Style"</div>
+                </div>
+                <div class="item-price">€28</div>
+            </div>
+        </div>
+
+        <!-- SPARKLING WINES -->
+        <div class="section wine-category">
+            <div class="section-title">🥂 Sparkling Wines</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Prosecco Dry</div>
+                </div>
+                <div class="item-price">€20</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Franciacorta Ferghettina</div>
+                    <div class="item-description">White and Rosé</div>
+                </div>
+                <div class="item-price">€65</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Franciacorta Cuvée Prestige Ca' del Bosco</div>
+                </div>
+                <div class="item-price">€65</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Franciacorta Bellavista Alma Gran Cuvé</div>
+                </div>
+                <div class="item-price">€65</div>
+            </div>
+        </div>
+
+        <!-- BAR MENU -->
+        <div class="section">
+            <div class="section-title">☕ Bar Menu</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Coffee</div>
+                </div>
+                <div class="item-price">€1.3</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Digestif</div>
+                </div>
+                <div class="item-price">€3</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Lemon Sorbet</div>
+                </div>
+                <div class="item-price">€3</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Dessert</div>
+                    <div class="allergens">Allergens: 1.2.7</div>
+                </div>
+                <div class="item-price">€5</div>
+            </div>
+        </div>
+
+        <!-- IMPORTANT NOTE -->
+        <div class="note">
+            <strong>🐟 Fresh Fish Information:</strong><br>
+            In compliance with Decree 17 July 2013, fish purchased fresh, intended to be consumed raw or partially raw, has been previously subjected "BY US" to rapid blast chilling treatment (-40°C) for greater food safety. ALL OUR FISH IS PURCHASED FRESH, PROCESSED AND BLAST CHILLED "BY US". ENJOY YOUR MEAL!
+        </div>
+
+        <div style="text-align: center; margin: 20px 0;">
+            <div style="font-size: 0.9em; opacity: 0.7;">Bread and Cover: €3</div>
+        </div>
+    </div>
+
+    <script>
+        // Wave animation
+        document.querySelectorAll('.wave').forEach((wave, index) => {
+            wave.style.animationDelay = `${index * 0.5}s`;
+        });
+    </script>
+</body>
+</html>
